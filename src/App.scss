@@ -9,13 +9,19 @@
   flex-direction: column;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
 .inputs-container {
   display: flex;
   justify-content: center;
   flex-direction: row;
   margin-top: 3em;
 
-  .nameField {
+  .name-field {
     margin-right: 1em;
     padding: 0 2em;
     text-align: center;
@@ -41,6 +47,7 @@
   justify-content: center;
   flex-direction: column;
   margin: 0 1em;
+  height: 60vh;
 }
 
 .letter-box {
@@ -115,7 +122,6 @@
   color: #fff;
   width: 100%;
   display: flex;
-  justify-content: end;
   -webkit-box-shadow: 1px -2px 18px 1px #000000;
   box-shadow: 1px -2px 18px 1px #000000;
 
@@ -124,5 +130,22 @@
     background-color: #fff;
     border-radius: 0.3em;
     margin: 0.5em;
+    align-self: flex-end;
+  }
+}
+
+.download-icon{
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  opacity: 1;
+
+  &:active{
+    opacity: 0.8;
+  }
+
+  svg{
+    width: 4.2em;
+    height: 4.2em;
   }
 }

@@ -1,9 +1,10 @@
 import './App.scss';
 import React, { useState } from 'react';
-import Letter from './Letter';
-import Header from './Header';
-import Logo from './Logo';
-import logoPacto from './logo.png';
+import Letter from './components/Letter';
+import Header from './components/Header';
+import Logo from './components/Logo';
+import DownloadIcon from './components/DownloadIcon';
+import logoPacto from './assets/logo.png';
 import { handleDownloadImage } from './imageCreator';
 
 function App() {
@@ -14,25 +15,18 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
-      <div className="inputs-container">
+      <div className='inputs-container'>
         <input
-          type="text"
-          className="nameField"
-          placeholder="Ingresa tu nombre"
+          type='text'
+          className='name-field'
+          placeholder='Ingresa tu nombre'
           onChange={onTextChange}
         />
-        <button
-          className="download-button"
-          type="button"
-          onClick={() => handleDownloadImage(printableRef)}
-        >
-          Descargar imagen
-        </button>
       </div>
-      <div ref={printableRef} className="container">
-        <div className="letter-box">
+      <div ref={printableRef} className='container'>
+        <div className='letter-box'>
           {text.split('').map((l, i) => (
             <Letter
               key={i}
@@ -45,7 +39,11 @@ function App() {
             <Logo className={'loguito'} />
           )}
         </div>
-        <img src={logoPacto} alt="" className="logoPacto" />
+        <img src={logoPacto} alt='' className='logoPacto' />
+        <DownloadIcon 
+          className='download-icon'
+          onClick={() => handleDownloadImage(printableRef)}
+        />
       </div>
     </div>
   );
