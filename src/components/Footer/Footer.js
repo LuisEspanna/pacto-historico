@@ -6,6 +6,7 @@ import ColombiaIcon from '../../assets/png/colombia-icon.png';
 import PetroFavicon from '../../assets/png/petro-favicon.png';
 import FranciaPhoto from '../../assets/png/francia-photo.png';
 import PetroPhoto from '../../assets/png/petro-photo.png';
+import Linkedin from "../Linkedin";
 
 export default function Footer() {
     return (
@@ -31,14 +32,18 @@ export default function Footer() {
                     <img className="developers-information__logo" src={HorseFace} alt="team-horse"/>
                 </div>
                 <p className="d-flex align-items-center">
-                    Desarrolladores de software de la ciudad de Pasto
+                    Desarrolladores de software.
                     <img className="developers-information__logo" src={ColombiaIcon} alt="colombia-icon"/>
                 </p>
                 <ul>
-                    <li>Daniel Álvarez</li>
-                    <li>Juan P. Botina</li>
-                    <li>Luis España</li>
-                    <li>Francisco J. Zambrano</li>
+                    <li>Daniel Álvarez.</li>
+                    <li>Juan P. Botina.</li>
+                    <li className="align-items-center">Luis Ángel España Y.
+                        <Linkedin linkedinUrl='https://www.linkedin.com/in/luis-angel-espa%C3%B1a-yepez-a384471a5/'/>
+                    </li>
+                    <li className="align-items-center">Francisco Zambrano.
+                        <Linkedin linkedinUrl='https://www.linkedin.com/in/zsfrancisco'/>
+                    </li>
                 </ul>
             </div>
         </section>);

@@ -1,7 +1,6 @@
 import './App.scss';
 import React, {useState} from 'react';
-import Letter from './components/Letter';
-import Header from './components/Header';
+import Letter from './components/Letter/Letter';
 import Logo from './components/Logo';
 import DownloadIcon from './components/DownloadIcon';
 import Footer from './components/Footer';
@@ -26,8 +25,7 @@ function App() {
                     <div className="navbar-brand">Nombre mamerto generator</div>
                 </div>
             </nav>
-            <Header/>
-            <div className='inputs-container'>
+            <div className='inputs-container mt-4'>
                 <div className="mb-3">
                     <input
                         type="text"
@@ -39,7 +37,7 @@ function App() {
                     <input
                         type="text"
                         className="form-control"
-                        id="hastag"
+                        id="hashtag"
                         placeholder="#"
                         onChange={onHashtagChange}
                     />
@@ -62,10 +60,8 @@ function App() {
                 <div className='hashtag'>{hashtag}</div>
                 <img src={logoPacto} alt='' className='logoPacto'/>
             </div>
-            <DownloadIcon
-                className='download-icon'
-                onClick={() => handleDownloadImage(printableRef)}
-            />
+            <DownloadIcon className='download-icon'
+                          onClick={() => handleDownloadImage(printableRef)}/>
             <Footer/>
         </div>
     );
