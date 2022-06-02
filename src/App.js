@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Logo from './components/Logo';
 import DownloadIcon from './components/DownloadIcon';
 import Footer from './components/Footer';
-import logoPacto from './assets/logo.png';
+import logoPacto from './assets/png/logo.png';
 import {handleDownloadImage} from './imageCreator';
 
 function App() {
