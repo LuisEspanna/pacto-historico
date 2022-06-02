@@ -1,90 +1,128 @@
 @font-face {
+  font-family: 'RubikOne';
+  src: url('./fonts/RubikOne-Regular.ttf');
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inputs-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 3em;
+
+  .nameField {
+    margin-right: 1em;
+    padding: 0 2em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: 8px;
+  }
+
+  .download-button {
+    background-color: #275efe;
+    height: 3em;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0 2em;
+    font-size: 1em;
+    font-weight: 500;
+    box-shadow: 0 2px 8px -1px var(--shadow);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 1em;
+}
+
+.letter-box {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+
+  .letter {
+    font-size: 5em;
     font-family: 'RubikOne';
-    src: url('./fonts/RubikOne-Regular.ttf');
-}
+    text-transform: uppercase;
+    display: inline-block;
+    opacity: 0.7;
+    width: 0.54em;
 
-.App{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.nameField{
-    max-width: 20em;
-    align-self: center;
-    transform: scale(1.5);
-    margin-top: 7em;
-}
-
-.letter-box{
-    margin-top: 15em;
-    display: flex;
-    justify-content: center;
-
-    .letter{
-        font-size: 5em;
-        font-family: 'RubikOne';
-        text-transform: uppercase;
-        display: inline-block;
-        opacity: 0.7;
-        width: 0.5em;
-        
-        &-i{
-            width: 0.2em;
-            padding-left: 5px
-        }
-
-        &-w{width: 57px;}
-        &-c{width: 47px;}
-        &-0{color: #FF9400;}
-        &-1{color: #00208B;}
-        &-2{color: #FF001B;}
-        &-3{color: #14AE40;}
-        &-4{color: #B10A9D;}
+    &-i {
+      width: 0.2em;
+      padding-left: 5px;
     }
 
-    .logo{
-        display: inline-block;
-        svg{
-            width: 3.6em;
-            height: 3.6em;
-            margin-top: 1.2em;
-            opacity: 0.7;
-            transform: translate(-0.1em);
-        }
+    &-w {
+      width: 57px;
     }
+    &-c {
+      width: 47px;
+    }
+    &-0 {
+      color: #ff9400;
+    }
+    &-1 {
+      color: #00208b;
+    }
+    &-2 {
+      color: #ff001b;
+    }
+    &-3 {
+      color: #14ae40;
+    }
+    &-4 {
+      color: #b10a9d;
+    }
+  }
 
-    .loguito{
-        display: inline-block;
-        svg{
-            width: 3.6em;
-            height: 3.6em;
-            opacity: 0.7;
-        }
+  .logo {
+    display: inline-block;
+    svg {
+      width: 4em;
+      opacity: 0.7;
+      transform: translate(-0.1em, -0.1em);
     }
+  }
+
+  .loguito {
+    display: inline-block;
+    svg {
+      width: 3.6em;
+      height: 3.6em;
+      opacity: 0.7;
+    }
+  }
 }
 
-.logoPacto{
-    width: 8em;
-    align-self: center;
-    margin-top: 10em;
-    margin-bottom: 10em;
+.logoPacto {
+  width: 8em;
+  align-self: center;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 
+.header {
+  background-color: #434343;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  -webkit-box-shadow: 1px -2px 18px 1px #000000;
+  box-shadow: 1px -2px 18px 1px #000000;
 
-.header{
-    background-color: #434343;
-    color: #FFF;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    -webkit-box-shadow: 1px -2px 18px 1px #000000; 
-    box-shadow: 1px -2px 18px 1px #000000;
-
-    .linkedin{
-        width: 1.2em;
-        background-color: #FFF;
-        border-radius: 0.3em;
-        margin: 0.5em;
-    }
+  .linkedin {
+    width: 1.2em;
+    background-color: #fff;
+    border-radius: 0.3em;
+    margin: 0.5em;
+  }
 }
