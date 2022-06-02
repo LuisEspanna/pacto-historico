@@ -5,7 +5,7 @@ function Letter({letter, index}) {
   const color = () => {
     let counter = 0;
     for (let i = 0; i < index; i++) {
-      if(counter < 3) counter += 1;
+      if(counter < 4) counter += 1;
       else counter = 0;
     }
 
