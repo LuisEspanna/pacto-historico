@@ -11,12 +11,10 @@ function App() {
     const printableRef = React.useRef();
     const [text, setText] = useState('');
     const [hashtag, setHashtag] = useState('');
-    const onTextChange = (event) => {
-        setText(event.target.value.toLowerCase());
-    };
-    const onHashtagChange = (event) => {
-        setHashtag(event.target.value.replace(' ', ''));
-    };
+    const [backgroundColorImage, setBackgroundColorImage,] = useState('color__white');
+    const onTextChange = (event) => setText(event.target.value.toLowerCase());
+    const onHashtagChange = (event) => setHashtag(event.target.value.replace(' ', ''));
+    const onChangeBackgroundColorImage = (colorClassName) => setBackgroundColorImage(colorClassName);
 
     return (
         <div className='App'>
@@ -43,7 +41,30 @@ function App() {
                     />
                 </div>
             </div>
-            <div ref={printableRef} className='container'>
+            <div className="color-selector">
+                <button type="button" className="btn color__blue"
+                        onClick={() => onChangeBackgroundColorImage('color__blue')}>Azul
+                </button>
+                <button type="button" className="btn color__purple"
+                        onClick={() => onChangeBackgroundColorImage('color__purple')}>Púrpura
+                </button>
+                <button type="button" className="btn color__pink"
+                        onClick={() => onChangeBackgroundColorImage('color__pink')}>Rosa
+                </button>
+                <button type="button" className="btn color__red"
+                        onClick={() => onChangeBackgroundColorImage('color__red')}>Rojo
+                </button>
+                <button type="button" className="btn color__yellow"
+                        onClick={() => onChangeBackgroundColorImage('color__yellow')}>Amarillo
+                </button>
+                <button type="button" className="btn color__green"
+                        onClick={() => onChangeBackgroundColorImage('color__green')}>Verde
+                </button>
+                <button type="button" className="btn color__white"
+                        onClick={() => onChangeBackgroundColorImage('color__white')}>Blanco
+                </button>
+            </div>
+            <div ref={printableRef} className={backgroundColorImage}>
                 <div className='letter-box'>
                     {text.split('').map((l, i) => (
                         <Letter
@@ -52,7 +73,6 @@ function App() {
                             index={i}
                         />
                     ))}
-
                     {text.charAt(text.length - 1) !== 'o' && (
                         <Logo className={'loguito'}/>
                     )}
