@@ -20,7 +20,7 @@ export default function Footer() {
                     <img className="footer__logo" src={PetroFavicon}
                          alt="gustavo-icon"/>
                     <a target="_blank" rel="noreferrer"
-                       href="https://gustavopetro.co/wp-content/uploads/2022/02/favicon.png">
+                       href="https://gustavopetro.co/programa-de-gobierno/">
                         Programa de Gobierno aquí
                     </a>
                 </div>
