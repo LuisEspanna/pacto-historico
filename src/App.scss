@@ -117,9 +117,7 @@
 
 .logoPacto {
   width: 8em;
-  align-self: center;
-  margin-top: 2em;
-  margin-bottom: 3em;
+  margin: 2em auto 3em;
 }
 
 .hashtag {
@@ -142,5 +140,88 @@
   svg {
     width: 4.2em;
     height: 4.2em;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+@mixin generateBackgroundColorImage($color) {
+  background-color: $color !important;
+  width: 550px;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 1rem;
+  border: 1px solid #e3e3e3;
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+}
+
+.color {
+
+  &-selector {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 1.5em;
+
+    button {
+      height: 39px;
+      width: 100px;
+      -webkit-box-shadow: 0 0 14px 3px #E3E3E3;
+      box-shadow: 0 0 14px 3px #E3E3E3;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__blue {
+    @include generateBackgroundColorImage(#b3ccf5);
+  }
+
+  &__purple {
+    @include generateBackgroundColorImage(#d2b3f5);
+  }
+
+  &__pink {
+    @include generateBackgroundColorImage(#f5b3e0);
+  }
+
+  &__red {
+    @include generateBackgroundColorImage(#f5b3b3);
+  }
+
+  &__orange {
+    @include generateBackgroundColorImage(#f2b472);
+  }
+
+  &__yellow {
+    @include generateBackgroundColorImage(#f5eab3);
+  }
+
+  &__green {
+    @include generateBackgroundColorImage(#d2f5b3);
+  }
+
+  &__white {
+    @include generateBackgroundColorImage(#ffffff);
+  }
+}
+
+.button-download__desktop {
+  width: 200px;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    display: none !important;
   }
 }
