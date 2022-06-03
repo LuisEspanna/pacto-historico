@@ -54,6 +54,11 @@ function App() {
                 <button type="button" className="btn color__red"
                         onClick={() => onChangeBackgroundColorImage('color__red')}>Rojo
                 </button>
+            </div>
+            <div className="color-selector">
+                <button type="button" className="btn color__orange"
+                        onClick={() => onChangeBackgroundColorImage('color__red')}>Naranja
+                </button>
                 <button type="button" className="btn color__yellow"
                         onClick={() => onChangeBackgroundColorImage('color__yellow')}>Amarillo
                 </button>
@@ -64,6 +69,7 @@ function App() {
                         onClick={() => onChangeBackgroundColorImage('color__white')}>Blanco
                 </button>
             </div>
+            <button className="button-download__desktop btn btn-primary mb-3" onClick={() => handleDownloadImage(printableRef)}>Descargar</button>
             <div ref={printableRef} className={backgroundColorImage}>
                 <div className='letter-box'>
                     {text.split('').map((l, i) => (

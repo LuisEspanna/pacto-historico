@@ -141,6 +141,10 @@
     width: 4.2em;
     height: 4.2em;
   }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 @mixin generateBackgroundColorImage($color) {
@@ -154,6 +158,10 @@
   margin: 0 auto;
   border-radius: 1rem;
   border: 1px solid #e3e3e3;
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 }
 
 .color {
@@ -166,9 +174,13 @@
 
     button {
       height: 39px;
-      width: fit-content;
+      width: 100px;
       -webkit-box-shadow: 0 0 14px 3px #E3E3E3;
       box-shadow: 0 0 14px 3px #E3E3E3;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
     }
   }
 
@@ -188,6 +200,10 @@
     @include generateBackgroundColorImage(#f5b3b3);
   }
 
+  &__orange {
+    @include generateBackgroundColorImage(#f2b472);
+  }
+
   &__yellow {
     @include generateBackgroundColorImage(#f5eab3);
   }
@@ -198,5 +214,14 @@
 
   &__white {
     @include generateBackgroundColorImage(#ffffff);
+  }
+}
+
+.button-download__desktop {
+  width: 200px;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    display: none !important;
   }
 }
