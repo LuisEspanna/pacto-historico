@@ -4,8 +4,9 @@ import Letter from './components/Letter/Letter';
 import Logo from './components/Logo';
 import DownloadIcon from './components/DownloadIcon';
 import Footer from './components/Footer';
-import logoPacto from './assets/png/logo.png';
+import Header from "./components/Header";
 import {handleDownloadImage} from './imageCreator';
+import logoPacto from './assets/png/logo.png';
 
 function App() {
     const printableRef = React.useRef();
@@ -18,11 +19,7 @@ function App() {
 
     return (
         <div className='App'>
-            <nav className="navbar navbar-dark bg-dark sticky-top bg-light">
-                <div className="container-fluid">
-                    <div className="navbar-brand">Nombre mamerto generator</div>
-                </div>
-            </nav>
+            <Header />
             <div className='inputs-container mt-4'>
                 <div className="mb-3">
                     <input
