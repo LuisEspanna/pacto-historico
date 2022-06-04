@@ -1,0 +1,30 @@
+.button-download {
+  &__desktop {
+    width: 200px;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+      display: none !important;
+    }
+  }
+
+  &__mobile {
+    position: fixed;
+    bottom: 1.4em;
+    right: 1em;
+    opacity: 1;
+
+    &:active {
+      opacity: 0.8;
+    }
+
+    svg {
+      width: 4.2em;
+      height: 4.2em;
+    }
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}

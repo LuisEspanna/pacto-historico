@@ -15,138 +15,6 @@
   user-select: none;
 }
 
-.inputs-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin-bottom: 1em;
-
-  .name-field {
-    margin-right: 1em;
-    padding: 0 2em;
-    text-align: center;
-    font-size: 1em;
-    font-weight: 500;
-    border-radius: 8px;
-  }
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 1em;
-  padding-bottom: 3em;
-  margin-bottom: 3em;
-  height: 80vh;
-  -webkit-box-shadow: -1px 0px 24px -10px #000000;
-  box-shadow: -1px 0px 24px -10px #000000;
-  border-radius: 10px;
-  width: 95%;
-  max-width: 95%;
-}
-
-.letter-box {
-  margin-top: 2.5em;
-  display: flex;
-  justify-content: center;
-
-  .letter {
-    font-size: 5em;
-    font-family: 'RubikOne', serif;
-    text-transform: uppercase;
-    display: inline-block;
-    opacity: 0.7;
-    width: 0.50em;
-
-    &-i {
-      width: 0.26em;
-      padding-left: 5px;
-    }
-
-    &-w, &-m {
-      width: 57px;
-    }
-
-    &-c {
-      width: 47px;
-    }
-
-    &-0 {
-      color: #ff9400;
-    }
-
-    &-1 {
-      color: #00208b;
-    }
-
-    &-2 {
-      color: #ff001b;
-    }
-
-    &-3 {
-      color: #14ae40;
-    }
-
-    &-4 {
-      color: #b10a9d;
-    }
-  }
-
-  .logo {
-    margin-top: 0.5em;
-    display: inline-block;
-
-    svg {
-      width: 4em;
-      opacity: 0.7;
-      transform: translate(-0.15em, -0.1em);
-    }
-  }
-
-  .loguito {
-    display: inline-block;
-    transform: translate(-0.4em, -0.9em);
-
-    svg {
-      width: 3.8em;
-      opacity: 0.7;
-    }
-  }
-}
-
-.logoPacto {
-  width: 8em;
-  margin: 2em auto 3em;
-}
-
-.hashtag {
-  color: #AE43A1;
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.download-icon {
-  position: fixed;
-  bottom: 1.4em;
-  right: 1em;
-  opacity: 1;
-
-  &:active {
-    opacity: 0.8;
-  }
-
-  svg {
-    width: 4.2em;
-    height: 4.2em;
-  }
-
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
 @mixin generateBackgroundColorImage($color) {
   background-color: $color !important;
   width: 550px;
@@ -165,24 +33,6 @@
 }
 
 .color {
-
-  &-selector {
-    width: 700px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto 1.5em;
-
-    button {
-      height: 39px;
-      width: 100px;
-      -webkit-box-shadow: 0 0 14px 3px #E3E3E3;
-      box-shadow: 0 0 14px 3px #E3E3E3;
-    }
-
-    @media (max-width: 768px) {
-      width: 100%;
-    }
-  }
 
   &__blue {
     @include generateBackgroundColorImage(#b3ccf5);
@@ -217,11 +67,3 @@
   }
 }
 
-.button-download__desktop {
-  width: 200px;
-  margin: 0 auto;
-
-  @media (max-width: 767px) {
-    display: none !important;
-  }
-}
