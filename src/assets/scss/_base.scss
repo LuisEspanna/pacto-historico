@@ -1,0 +1,37 @@
+@import './mixins';
+@import './colors';
+
+.color {
+
+  &__blue {
+    @include generateBackgroundColorImage($blue-light);
+  }
+
+  &__purple {
+    @include generateBackgroundColorImage($purple-light);
+  }
+
+  &__pink {
+    @include generateBackgroundColorImage($pink-light);
+  }
+
+  &__red {
+    @include generateBackgroundColorImage($red-light);
+  }
+
+  &__orange {
+    @include generateBackgroundColorImage($orange-light);
+  }
+
+  &__yellow {
+    @include generateBackgroundColorImage($yellow-light);
+  }
+
+  &__green {
+    @include generateBackgroundColorImage($green-light);
+  }
+
+  &__white {
+    @include generateBackgroundColorImage($white);
+  }
+}

@@ -1,9 +1,11 @@
+@import '../../assets/scss/responsive-breakpoints';
+
 .button-download {
   &__desktop {
     width: 200px;
     margin: 0 auto;
 
-    @media (max-width: 767px) {
+    @media (max-width: $mobile - 1) {
       display: none !important;
     }
   }
@@ -23,7 +25,7 @@
       height: 4.2em;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $mobile) {
       display: none;
     }
   }

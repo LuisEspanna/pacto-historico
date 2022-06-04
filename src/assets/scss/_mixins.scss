@@ -1,0 +1,18 @@
+@import './responsive-breakpoints';
+
+@mixin generateBackgroundColorImage($color) {
+  background-color: $color !important;
+  width: 550px;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  border-radius: 1rem;
+  border: 1px solid #e3e3e3;
+
+  @media (max-width: $mobile) {
+    width: 95%;
+  }
+}
