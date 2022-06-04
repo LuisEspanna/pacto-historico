@@ -24,7 +24,7 @@ export default function ColorSelectors(props) {
             </div>
             <div className="color-selectors">
                 <button type="button" className="btn color__orange"
-                        onClick={() => onChangeBackgroundColorImage('color__red')}>Naranja
+                        onClick={() => onChangeBackgroundColorImage('color__orange')}>Naranja
                 </button>
                 <button type="button" className="btn color__yellow"
                         onClick={() => onChangeBackgroundColorImage('color__yellow')}>Amarillo

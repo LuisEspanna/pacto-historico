@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
 import TextFields from "./TextFields";
-import Letter from "../Letter";
-import Logo from "../Logo";
 import {handleDownloadImage} from "../../imageCreator";
 import DownloadIcon from "../DownloadIcon";
-import logoPacto from "../../assets/png/logo.png";
 import ColorSelectors from "./ColorSelectors";
+import Printable from "./Printable";
 import './Generator.scss';
 
 export default function Generator() {
@@ -24,22 +22,8 @@ export default function Generator() {
                 Descargar
             </button>
             <DownloadIcon className='button-download__mobile' onClick={() => handleDownloadImage(printableRef)}/>
-            <div ref={printableRef} className={backgroundColorImage}>
-                <div className='letter-box'>
-                    {text.split('').map((l, i) => (
-                        <Letter
-                            key={i}
-                            letter={l === 'o' && i < text.length - 1 ? 'O' : l}
-                            index={i}
-                        />
-                    ))}
-                    {text.charAt(text.length - 1) !== 'o' && (
-                        <Logo className={'loguito'}/>
-                    )}
-                </div>
-                <div className='hashtag'>{hashtag}</div>
-                <img src={logoPacto} alt='' className='logoPacto'/>
-            </div>
+            <Printable text={text} hashtag={hashtag} backgroundColorImage={backgroundColorImage}
+                       printableRef={printableRef}/>
         </>
     );
 }

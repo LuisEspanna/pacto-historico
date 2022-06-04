@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './Footer.scss';
 import ColombiaFlag from '../../assets/png/colombia-logo.png';
 import HorseFace from '../../assets/png/horse-face.png';
 import ColombiaIcon from '../../assets/png/colombia-icon.png';
@@ -7,6 +6,7 @@ import PetroFavicon from '../../assets/png/petro-favicon.png';
 import FranciaPhoto from '../../assets/png/francia-photo.png';
 import PetroPhoto from '../../assets/png/petro-photo.png';
 import Linkedin from "../Linkedin";
+import './Footer.scss';
 
 export default function Footer() {
     return (
@@ -46,5 +46,6 @@ export default function Footer() {
                     </li>
                 </ul>
             </div>
-        </section>);
+        </section>
+    );
 }
