@@ -1,0 +1,17 @@
+.color-selectors {
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 1.5em;
+
+  button {
+    height: 39px;
+    width: 100px;
+    -webkit-box-shadow: 0 0 14px 3px #E3E3E3;
+    box-shadow: 0 0 14px 3px #E3E3E3;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

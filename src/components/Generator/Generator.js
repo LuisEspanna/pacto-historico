@@ -1,73 +1,29 @@
 import React, {useState} from 'react';
+import TextFields from "./TextFields";
 import Letter from "../Letter";
 import Logo from "../Logo";
 import {handleDownloadImage} from "../../imageCreator";
 import DownloadIcon from "../DownloadIcon";
 import logoPacto from "../../assets/png/logo.png";
+import ColorSelectors from "./ColorSelectors";
+import './Generator.scss';
 
-export default function Generator () {
+export default function Generator() {
     const printableRef = React.useRef();
 
     const [text, setText] = useState('');
     const [hashtag, setHashtag] = useState('');
     const [backgroundColorImage, setBackgroundColorImage,] = useState('color__white');
 
-    const onTextChange = (event) => setText(event.target.value.toLowerCase());
-    const onHashtagChange = (event) => setHashtag(event.target.value.replace(' ', ''));
-    const onChangeBackgroundColorImage = (colorClassName) => setBackgroundColorImage(colorClassName);
-
     return (
         <>
-            <div className='inputs-container mt-4'>
-                <div className="mb-3">
-                    <input
-                        type="text"
-                        className="form-control mb-3"
-                        id="name"
-                        placeholder="Ingresa tu nombre"
-                        onChange={onTextChange}
-                    />
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="hashtag"
-                        placeholder="#"
-                        onChange={onHashtagChange}
-                    />
-                </div>
-            </div>
-
-            <div className="color-selector">
-                <button type="button" className="btn color__blue"
-                        onClick={() => onChangeBackgroundColorImage('color__blue')}>Azul
-                </button>
-                <button type="button" className="btn color__purple"
-                        onClick={() => onChangeBackgroundColorImage('color__purple')}>Púrpura
-                </button>
-                <button type="button" className="btn color__pink"
-                        onClick={() => onChangeBackgroundColorImage('color__pink')}>Rosa
-                </button>
-                <button type="button" className="btn color__red"
-                        onClick={() => onChangeBackgroundColorImage('color__red')}>Rojo
-                </button>
-            </div>
-            <div className="color-selector">
-                <button type="button" className="btn color__orange"
-                        onClick={() => onChangeBackgroundColorImage('color__red')}>Naranja
-                </button>
-                <button type="button" className="btn color__yellow"
-                        onClick={() => onChangeBackgroundColorImage('color__yellow')}>Amarillo
-                </button>
-                <button type="button" className="btn color__green"
-                        onClick={() => onChangeBackgroundColorImage('color__green')}>Verde
-                </button>
-                <button type="button" className="btn color__white"
-                        onClick={() => onChangeBackgroundColorImage('color__white')}>Blanco
-                </button>
-            </div>
-
-            <button className="button-download__desktop btn btn-primary mb-3" onClick={() => handleDownloadImage(printableRef)}>Descargar</button>
-
+            <TextFields setText={setText} setHashtag={setHashtag}/>
+            <ColorSelectors setBackgroundColorImage={setBackgroundColorImage}/>
+            <button className="button-download__desktop btn btn-primary mb-3"
+                    onClick={() => handleDownloadImage(printableRef)}>
+                Descargar
+            </button>
+            <DownloadIcon className='button-download__mobile' onClick={() => handleDownloadImage(printableRef)}/>
             <div ref={printableRef} className={backgroundColorImage}>
                 <div className='letter-box'>
                     {text.split('').map((l, i) => (
@@ -84,7 +40,6 @@ export default function Generator () {
                 <div className='hashtag'>{hashtag}</div>
                 <img src={logoPacto} alt='' className='logoPacto'/>
             </div>
-            <DownloadIcon className='download-icon' onClick={() => handleDownloadImage(printableRef)}/>
         </>
     );
 }
