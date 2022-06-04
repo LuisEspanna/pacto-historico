@@ -36,12 +36,12 @@ export default function Footer() {
                     <img className="developers-information__logo" src={ColombiaIcon} alt="colombia-icon"/>
                 </p>
                 <ul>
-                    <li>Daniel Álvarez.</li>
-                    <li>Juan P. Botina.</li>
-                    <li className="align-items-center">Luis Ángel España Y.
+                    <li>Daniel.</li>
+                    <li>Juan P.</li>
+                    <li className="align-items-center">Luis.
                         <Linkedin linkedinUrl='https://www.linkedin.com/in/luis-angel-espa%C3%B1a-yepez-a384471a5/'/>
                     </li>
-                    <li className="align-items-center">Francisco Zambrano.
+                    <li className="align-items-center">Francisco.
                         <Linkedin linkedinUrl='https://www.linkedin.com/in/zsfrancisco'/>
                     </li>
                 </ul>
