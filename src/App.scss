@@ -1,3 +1,5 @@
+@import './assets/scss/base';
+
 @font-face {
   font-family: 'RubikOne';
   src: url('./fonts/RubikOne-Regular.ttf');
@@ -14,56 +16,3 @@
   padding: 0;
   user-select: none;
 }
-
-@mixin generateBackgroundColorImage($color) {
-  background-color: $color !important;
-  width: 550px;
-  height: 800px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
-  border-radius: 1rem;
-  border: 1px solid #e3e3e3;
-
-  @media (max-width: 768px) {
-    width: 95%;
-  }
-}
-
-.color {
-
-  &__blue {
-    @include generateBackgroundColorImage(#b3ccf5);
-  }
-
-  &__purple {
-    @include generateBackgroundColorImage(#d2b3f5);
-  }
-
-  &__pink {
-    @include generateBackgroundColorImage(#f5b3e0);
-  }
-
-  &__red {
-    @include generateBackgroundColorImage(#f5b3b3);
-  }
-
-  &__orange {
-    @include generateBackgroundColorImage(#f2b472);
-  }
-
-  &__yellow {
-    @include generateBackgroundColorImage(#f5eab3);
-  }
-
-  &__green {
-    @include generateBackgroundColorImage(#d2f5b3);
-  }
-
-  &__white {
-    @include generateBackgroundColorImage(#ffffff);
-  }
-}
-

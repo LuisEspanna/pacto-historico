@@ -1,6 +1,9 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/responsive-breakpoints';
+
 .footer {
-  background-color: #ff9c00;
-  color: #fff;
+  background-color: $orange-dark;
+  color: $white;
   padding: 3rem;
   margin-top: 2em;
   display: flex;
@@ -14,7 +17,7 @@
     margin-left: 0.2rem;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     flex-direction: column;
     justify-content: center;
     align-items: unset;
@@ -37,7 +40,7 @@
   }
 
   &__information {
-    background-color: #c06db4;
+    background-color: $purple-dark;
     border-radius: 1rem;
     height: 50px;
     display: flex;
@@ -45,13 +48,13 @@
 
     a {
       text-decoration: none;
-      color: white;
+      color: $white;
       margin-left: 0.8em;
     }
   }
 
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     width: 100%;
   }
 }
@@ -60,7 +63,7 @@
   flex: 1 1 auto;
   height: 250px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     width: 100%;
     flex: unset;
   }
@@ -73,7 +76,7 @@
     @extend .footer__logo;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $mobile) {
     width: 100%;
   }
 }
